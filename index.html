@@ -442,7 +442,7 @@ td.ttl{font-size:11px;font-weight:800;white-space:nowrap;color:#ffe9a8}
       <div id="prog"></div>
     </div>
     <div class="sec"><details id="more"><summary>⚙ くわしく設定する（キャラ・ステージ・人数・強さ・ルール）</summary>
-      <h3 style="margin-top:12px">ファイター選択</h3><div id="chars"></div><div class="cvrow"><span>カラー</span><div id="cvsel"></div><small>同じキャラが複数いる時は自動で別カラーになります</small></div>
+      <h3 style="margin-top:12px">ファイター選択</h3><div id="chars"></div><div class="cvrow"><span>カラー</span><div id="cvsel"></div><small>同じキャラが複数いる時は自動で別カラーになります</small></div><div class="cvrow" id="tmrow"><span>チーム</span><div class="seg" id="tmsel" style="flex:1"></div><small>チーム戦の時だけ。おまかせは人数が少ないチームに入ります</small></div>
       <h3 style="margin-top:14px">ステージ選択</h3><div id="stages"></div>
       <h3 style="margin-top:14px">CPU対戦の設定</h3><div class="opts">
         <div class="opt"><label>参加人数</label><div class="seg" data-k="count"><button data-v="2">2</button><button data-v="4">4</button><button data-v="6">6</button><button data-v="8">8</button><button data-v="12">12</button></div></div>
@@ -457,7 +457,7 @@ td.ttl{font-size:11px;font-weight:800;white-space:nowrap;color:#ffe9a8}
       <b>操作方法：</b>使っている機器を自動で判別して表示します（タブで切り替えても見られます）
       <div id="ctltabs"></div><div class="ctlnow" id="ctlnow"></div><div id="ctlhelp"></div>
       <div id="ctllay"></div><br>
-      <b>ステージ：</b>🌋火山＝火口の溶岩へ（噴石・外壁で跳ね返り）　🧊氷山＝海へ（滑る氷・大波・流氷が沈む）　🏜️蟻地獄＝中央の穴へ（流砂が引き込む・アゴ攻撃）　🌴ジャングル＝木の下へ（葉っぱで大ジャンプ・枝が折れる）　🪐宇宙＝低重力（無重力タイム・宇宙ゴミ）　🏙️タワー＝屋上から下へ（突風）　☁️空中庭園＝場外へ<br>
+      <b>ステージ：</b>🌆都市＝場外へ（道路をトラックが爆走・ビルの屋上）　🌾草原＝場外へ（さまよう竜巻が吸い込んで打ち上げる）　🌋火山＝火口の溶岩へ（噴石・外壁で跳ね返り）　🧊氷山＝海へ（滑る氷・大波・流氷が沈む）　🏜️蟻地獄＝中央の穴へ（流砂が引き込む・アゴ攻撃）　🌴ジャングル＝木の下へ（葉っぱで大ジャンプ・枝が折れる）　🪐宇宙＝低重力（無重力タイム・宇宙ゴミ）　🏙️タワー＝屋上から下へ（突風）　☁️空中庭園＝場外へ<br>
       <b>派生攻撃：</b>空中で攻撃＋前＝前蹴り／＋後ろ＝後ろ蹴り（強）／上昇中＝打ち上げ／空中スマッシュ＝メテオ叩きつけ。走りながら攻撃＝スライディング。ガード中に攻撃＝つかみ投げ（ガード不可）<br>
       <b>お助けアイテム：</b>❤回復　⚡パワー　👟スピード（+空中ジャンプ）　🛡バリア（吹っ飛び半減）　🪶復活の羽（1回だけ撃墜を回避）　★SPスター（スキル即満タン）　🍄巨大キノコ（大きく重く強く）<br>
       <b>トラブルアイテム：</b>☠毒キノコ（小さく軽くなる）　💣ボム／🌀ブラックホール（拾って攻撃で投げる。ブラックホールは周囲を吸い込んで破裂）　❓ハテナボックス（アタリかハズレか…爆発・操作反転・落雷も）<br>
@@ -519,7 +519,7 @@ td.ttl{font-size:11px;font-weight:800;white-space:nowrap;color:#ffe9a8}
       <textarea id="invitetxt" class="hidden" readonly></textarea></div>
     <div class="sec"><h3>ルール</h3><div class="rsum" id="rsum-room" style="margin:0"></div></div>
     <div class="sec"><h3>参加者</h3><div id="members" style="display:flex;flex-direction:column;gap:6px"></div></div>
-    <div class="sec"><h3>使用キャラ</h3><div class="seg" id="roomchar"></div><div class="cvrow"><span>カラー</span><div id="cvsel2"></div></div></div>
+    <div class="sec"><h3>使用キャラ</h3><div class="seg" id="roomchar"></div><div class="cvrow"><span>カラー</span><div id="cvsel2"></div></div><div class="cvrow" id="tmrow2"><span>チーム</span><div class="seg" id="tmsel2" style="flex:1"></div></div></div>
     <div class="sec" id="hostset"><h3>ルール（ホスト）</h3><div class="opt" style="margin-bottom:8px"><label>ステージ</label><div class="seg" id="roomstage"></div></div><div class="opts">
       <div class="opt"><label>総人数（不足はCPU）</label><div class="seg" data-nk="count"><button data-v="0">人のみ</button><button data-v="4">4</button><button data-v="8">8</button><button data-v="12">12</button></div></div>
       <div class="opt"><label>CPUの強さ</label><div class="seg" data-nk="level"><button data-v="0">よわい</button><button data-v="1">ちょいよわ</button><button data-v="2">ふつう</button><button data-v="3">つよい</button><button data-v="4">最強</button><button data-v="5">👑王者</button></div></div>
@@ -571,7 +571,7 @@ td.ttl{font-size:11px;font-weight:800;white-space:nowrap;color:#ffe9a8}
 /* =========================================================
    BLAST ROYALE v2 — online platform-fighter battle royale
    ========================================================= */
-const GAME_VERSION='1.2.0';
+const GAME_VERSION='1.3.0';
 const $=s=>document.querySelector(s);
 const clamp=(v,a,b)=>v<a?a:v>b?b:v;
 const lerp=(a,b,t)=>a+(b-a)*t;
@@ -636,8 +636,8 @@ const LV_ANCH=[
   {react:.035,aggr:.99,shield:.66,smashPct:54,noise:.01,recov:1,skill:1,parry:.85,di:1,dodge:1,tech:1,edge:1,punish:1},
 ];
 function levelParams(t){t=clamp(t,0,4);const i=Math.min(3,Math.floor(t)),k=t-i,a=LV_ANCH[i],b=LV_ANCH[i+1],o={tier:t};for(const key in a)o[key]=a[key]+(b[key]-a[key])*k;return o;}
-const CAUSE=['','足をふみ外して落下','足場の崩落','海賊船の砲撃','大鐘の衝撃波','噴石','宇宙ゴミ','ボムの爆発','落雷','ブラックホール','アリジゴクのアゴ','大波','突風','メテオレイン','流砂','操作反転中に落下','自分のボム'];
-const CAUSE_TIP={1:'崖の近くではジャンプを残しておこう',2:'赤く光った足場からはすぐ離れよう',3:'赤い線が見えたらジャンプ！',4:'広がる光の輪はジャンプでこえよう',5:'赤い円の外へ逃げよう',6:'赤い円の外へ逃げよう',7:'ボムからは距離をとろう',8:'黄色い円の外へ逃げよう',9:'吸いこまれる前に反対へ走ろう',10:'穴のふちに近づきすぎない',11:'波はジャンプでこえよう',12:'風上にむかって走ろう',13:'サドンデスは動きつづけよう',14:'流砂は外へむかって走ろう',15:'反転中はむりに動かない',16:'投げたボムからは離れよう'};
+const CAUSE=['','足をふみ外して落下','足場の崩落','海賊船の砲撃','大鐘の衝撃波','噴石','宇宙ゴミ','ボムの爆発','落雷','ブラックホール','アリジゴクのアゴ','大波','突風','メテオレイン','流砂','操作反転中に落下','自分のボム','トラックにはねられた','竜巻'];
+const CAUSE_TIP={17:'赤く光った道路からすぐ出よう',18:'竜巻からは早めに離れよう',1:'崖の近くではジャンプを残しておこう',2:'赤く光った足場からはすぐ離れよう',3:'赤い線が見えたらジャンプ！',4:'広がる光の輪はジャンプでこえよう',5:'赤い円の外へ逃げよう',6:'赤い円の外へ逃げよう',7:'ボムからは距離をとろう',8:'黄色い円の外へ逃げよう',9:'吸いこまれる前に反対へ走ろう',10:'穴のふちに近づきすぎない',11:'波はジャンプでこえよう',12:'風上にむかって走ろう',13:'サドンデスは動きつづけよう',14:'流砂は外へむかって走ろう',15:'反転中はむりに動かない',16:'投げたボムからは離れよう'};
 /* attack defs: start/act/end (s), dmg, base kb, growth, angle(deg), hitbox r / fwd / h */
 const ATK={
   jab1 :{start:.05,act:.07,end:.17,dmg:3,base:3,grow:.03,ang:8,r:1.0,fwd:1.1,h:1.0,next:'jab2',move:.1},
@@ -928,6 +928,11 @@ const Sound={
   startBGM(){Music.play(G.demo?'menu':STG.key,G.demo?1:0);},stopBGM(){Music.stop();},
 };
 
+Object.assign(Sound,{
+  horn(){if(!this.ok())return;const t=this.now();for(const d of[0,.42])for(const f of[311,392])this.V(null,{type:'sawtooth',f,t:t+d,dur:.32,a:.01,d:.1,s:.8,r:.06,v:.035,filter:{type:'lowpass',f:1800}});
+    this.N(null,{t:t+1.5,a:.3,dur:1.6,v:.3,swell:true,filter:{type:'lowpass',f:300,f2:900,ft:1}});this.V(null,{type:'sawtooth',f:55,f2:80,glide:1.2,t:t+1.4,dur:1.4,a:.2,r:.3,v:.05,filter:{type:'lowpass',f:300}});},
+  twister(){if(!this.ok())return;const t=this.now();this.N(null,{t,a:1.5,dur:9,v:.28,swell:true,filter:{type:'bandpass',f:300,f2:900,ft:4,q:1.5},rev:.3});this.V(null,{type:'sine',f:70,t,dur:8,a:2,r:1,v:.15,vib:{r:3,d:40}});},
+});
 // per-effect level trims (measured offline against the BGM bus)
 for(const[name,k]of Object.entries({jump:5,djump:3.5,land:4,swing:8,shield:7,armor:9,ice:3,warp:2.5,wall:3,boing:3,respawn:3,count:2.2,go:1.9,rush:1.7,mystery:1.6,pick:1.3,counter:2,eliminated:2,ui:5,zap:1.4,freeze:1.6,charge:1.6,splash:2,spReady:1.6,smash:2,koStar:2,bellWarn:1.2,bigBell:1.4,parry:2.5,combo:4,announce:1.5,cannonWarn:5,cannon:1.3})){
   const fn=Sound[name];Sound[name]=function(...a){const pk=this._k;this._k=(pk||1)*k;try{return fn.apply(this,a);}finally{this._k=pk;}};}
@@ -1023,6 +1028,14 @@ const SONGS={
     sec:{A:{prog:'1415',mel:['5-5-6-5-3---1-3-','4-4-6-4-!---6-4-','5-3-5-!-@-!-6-5-','@-!-7-6-5-------']},
          B:{prog:'4156',arp:'0.1.2.1.0.1.2.1.',mel:['6-6-!-6-4-6-!---','5-5-!-5-3-5-!---','@-@-#-@-!-@-#---','%-$-#-@-!-------']},
          C:{prog:'2511',arp:'0.2.4.2.0.2.4.2.',mel:['2.2.4-6-!-6-4-2-','7.7.@-7-5-4-2---','3-5-!-5-3-5-!-@-','!---------5-6-7-']}},arr:'AABC'},
+  city:{gain:1.2,title:'Downtown Rush',bpm:136,root:62,scale:'dorian',swing:0,lead:'saw',bassI:'syn',pad:'pad',arpI:'pluck',seventh:true,dbl:12,
+    drums:{k:'x...x...x...x...',s:'....x.......x...',h:'xxxxxxxxxxxxxxxx',o:'..x...x...x...x.'},bass:'R.RO.R.OR.RO.5O.',
+    sec:{A:{prog:'1474',arp:'0.1.2.3.2.1.0.1.',mel:['5-5-6-5-3---1-3-','4-6-!-6-4---.-5-','5-5-6-5-!---6-5-','4-3-2-3-1-------']},
+         B:{prog:'6745',arp:'0.2.1.3.0.2.1.3.',mel:['!---@-#-@---!-6-','7---!-@-!---7-5-','6-!-@-!-6-5-4-3-','5---7---@-------']}},arr:'AABA'},
+  grass:{gain:1.0,title:'Meadow Breeze',bpm:124,root:67,scale:'major',swing:.12,lead:'pulse',bassI:'pbass',pad:'pad',arpI:'marimba',dbl:12,fillDrum:'t',
+    drums:{k:'x.....x...x.....',s:'....x.......x...',h:'x.x.x.x.x.x.x.x.'},bass:'R...5...R...5.O.',
+    sec:{A:{prog:'1451',arp:'0.1.2.1.0.1.2.1.',mel:['3-5-!---7-6-5---','4-6-!---@-!-6---','5-3-5-!-@-!-7-6-','5-------3-4-5---']},
+         B:{prog:'6425',arp:'0.2.4.2.0.2.4.2.',mel:['6-6-!-6-5-4-3---','4-4-6-4-3-2-1---','2-3-4-5-6-7-!-@-','!---7---5-------']}},arr:'AABA'},
 };
 function noteOf(ch){if(ch>='1'&&ch<='7')return[+ch,0];let i='!@#$%^&'.indexOf(ch);if(i>=0)return[i+1,1];i='zxcvbnm'.indexOf(ch);if(i>=0)return[i+1,-1];return null;}
 function degMidi(S,deg,oct){const sc=SCALES[S.scale],k=deg-1;return S.root+12*(oct+Math.floor(k/7))+sc[((k%7)+7)%7];}
@@ -1138,6 +1151,10 @@ const STAGES={
   castle:{name:'古城',icon:'🏰',desc:'奈落へ落とせ！ 中央の大鐘を攻撃すると衝撃波が外へ広がる（自分には当たらない）。鐘の上の屋根にも乗れる。外壁から崩れ落ちる',ko:'fall',killY:-18,blastR:50,high:46,spawnR:15,first:34,every:22,
     sky:['#0a0822','#24164a','#5a2f74','#b85a6a','#120a1c'],fog:'#3a2a58',fogN:60,fogF:230,hemi:[0xa898e8,0x1a1028],hemiI:.85,sun:0xd0d8ff,sunI:.95,cloud:0x6a5a8a,cloudE:0x2a2040,cloudY:22},
   island:{name:'孤島',icon:'🏝️',desc:'海に落とせ！ 沖の海賊船が砲撃。ジャンプでかわすか丘に隠れろ。浜辺は沈んでいく',ko:'splash',killY:-2.4,blastR:52,high:48,spawnR:17,first:36,every:24,
+  city:{name:'都市',icon:'🌆',desc:'大通りの交差点で大乱闘！ 道路をトラックが爆走。赤く光った道路から逃げろ。ビルの屋上にも乗れる',ko:'blast',killY:-26,blastR:48,high:46,spawnR:13,first:38,every:24,
+    sky:['#1a2a5a','#5a8ad8','#ffd0a0','#ff9a6a','#3a3050'],fog:'#c8b0c0',fogN:80,fogF:290,hemi:[0xfff0e0,0x404058],sun:0xffe0c0,sunI:1.05,cloud:0xffe8e0,cloudE:0x8a6a7a,cloudY:30},
+  grass:{name:'草原',icon:'🌾',desc:'見晴らしのいい草原。さまよう竜巻に近づくと吸い込まれて空高く飛ばされる！ 外側の丘から崩れる',ko:'blast',killY:-26,blastR:50,high:48,spawnR:14,first:36,every:24,
+    sky:['#2a6ad8','#7ec0ff','#d8f0ff','#fff4d0','#5a8a3a'],fog:'#c8e8ff',fogN:90,fogF:290,hemi:[0xf0fff0,0x4a7a3a],sun:0xfff4d8,sunI:1.15,cloud:0xffffff,cloudE:0x9ab8d0,cloudY:26},
     sky:['#1a8ad8','#5cc4f0','#bff0ff','#fff2c8','#2a9ab8'],fog:'#bdeefa',fogN:85,fogF:280,hemi:[0xfff8e0,0x2a8a9a],hemiI:.8,sun:0xfff0d0,sunI:1.2,cloud:0xffffff,cloudE:0xa8d8ee,cloudY:24},
 };
 const STAGE_KEYS=Object.keys(STAGES);
@@ -1406,6 +1423,64 @@ const BUILD={
     // cannon aim lines (pooled)
     STG.deco.aims=[0,1].map(()=>{const m=new THREE.Mesh(GEO.box,new THREE.MeshBasicMaterial({color:0xff3a2a,transparent:true,opacity:0,depthWrite:false}));m.visible=false;STG.root.add(m);return m;});
   },
+  city(){
+    const side=SM_(0x6a6a72,{flatShading:true}),under=SM_(0x34343e),bldS=SM_(0x7a86a0,{roughness:.35,metalness:.25});
+    const asph=[0x45454d,0x4b4b53],walk=[0xbcb6a8,0xc8c2b4,0xb0aa9c];
+    for(let q=-5;q<=5;q++)for(let r=-5;r<=5;r++){const ring=hexDist(q,r);if(ring>5)continue;const p=hexToWorld(q,r),v=((q-r)%3+3)%3;
+      const road=Math.abs(p.z)<HEX*1.05||Math.abs(p.x)<HEX*1.3,cg=ring>=4?6-ring:0;
+      if(!road&&(ring===3||ring===4)&&((q*2+r)%3+3)%3===0)addTile(q,r,{col:0x8a92a6,side:bldS,under,top:ring===3?2.6:3.6,h:TILE_T+(ring===3?2.6:3.6),taper:.98,cg});
+      else addTile(q,r,{col:road?asph[v%2]:walk[v],side,under,cg});}
+    const wm=new THREE.MeshBasicMaterial({color:0xf4f4f0}),ym=new THREE.MeshBasicMaterial({color:0xffd23a});
+    for(let i=-3;i<=3;i++){if(!i)continue;box(wm,i*4.2,.03,0,1.8,.02,.22);box(wm,0,.03,i*4.2,.22,.02,1.8);}
+    for(let k=-2;k<=2;k++){box(ym,6.4,.03,k*1.1,.5,.02,.6);box(ym,-6.4,.03,k*1.1,.5,.02,.6);box(ym,k*1.1,.03,6.6,.6,.02,.5);box(ym,k*1.1,.03,-6.6,.6,.02,.5);}
+    addPlat({x:0,z:0,y:6.4,r:2.4,col:0x2a2a3a,rim:0xff4ad8,rimE:0x880066,rimW:.14,thick:.4});
+    const pole=SM_(0x9aa0b0,{metalness:.5,roughness:.4});for(const[a,b]of[[1,1],[1,-1],[-1,1],[-1,-1]]){mesh(GEO.cyl,pole,a*2.6,3.2,b*2.6,0,0,0,[.12,6.4,.12]);}
+    mesh(GEO.box,new THREE.MeshBasicMaterial({color:0x3ad8ff}),0,7.4,0,0,Math.PI/4,0,[3.4,1.6,.12]);
+    // lane warning overlays + trucks
+    const lw=()=>{const m=new THREE.Mesh(GEO.box,new THREE.MeshBasicMaterial({color:0xff3a2a,transparent:true,opacity:0,depthWrite:false}));m.visible=false;STG.root.add(m);return m;};
+    STG.deco.laneW=[lw(),lw()];STG.deco.laneW[0].scale.set(60,.05,5.6);STG.deco.laneW[1].scale.set(8,.05,60);STG.deco.laneW.forEach(m=>m.position.y=.06);
+    const mkTruck=c=>{const g=new THREE.Group();const bm=LM_(c),gl=LM_(0x9ad8ff),bk=LM_(0x1a1a20),wh=LM_(0xf8f8f8);
+      const cargo=new THREE.Mesh(GEO.box,wm);cargo.scale.set(2.6,2.9,6);cargo.position.set(0,2.1,-1.2);g.add(cargo);
+      const cab=new THREE.Mesh(GEO.box,bm);cab.scale.set(2.6,2.4,2.2);cab.position.set(0,1.8,3);g.add(cab);
+      const ws=new THREE.Mesh(GEO.box,gl);ws.scale.set(2.3,.9,.1);ws.position.set(0,2.4,4.12);g.add(ws);
+      for(const x of[-1.2,1.2])for(const z of[-3,-.4,3]){const w=new THREE.Mesh(GEO.cyl,bk);w.scale.set(.55,.4,.55);w.rotation.z=Math.PI/2;w.position.set(x,.55,z);g.add(w);}
+      for(const x of[-.9,.9]){const l=new THREE.Mesh(GEO.sph,new THREE.MeshBasicMaterial({color:0xfff4c0}));l.scale.set(.22,.18,.08);l.position.set(x,1.3,4.15);g.add(l);}
+      g.traverse(o=>{if(o.isMesh)o.castShadow=true;});g.visible=false;STG.root.add(g);return g;};
+    STG.deco.trucks=[mkTruck(0xd8302a),mkTruck(0x2a6ad8)];
+    // skyline
+    const cm=[0x2a3450,0x34304a,0x283a4a,0x3a3a54],wl=[0xffd88a,0x8ae0ff,0xffe8c0];
+    for(let i=0;i<60;i++){const a=i/60*Math.PI*2+rand(-.04,.04),R=rand(55,160),h=rand(25,110),w=rand(8,18),x=Math.cos(a)*R,z=Math.sin(a)*R;
+      if(Math.abs(x)<9||Math.abs(z)<9)continue;const b=mesh(GEO.box,LM_(cm[i%4]),x,-30+h/2,z,0,rand(0,3),0,[w,h,w]);
+      for(let k=0;k<3;k++)mesh(GEO.box,new THREE.MeshBasicMaterial({color:wl[(i+k)%3]}),x,-30+h*(.35+k*.2),z,0,b.rotation.y,0,[w*1.01,h*.03,w*1.01]);}
+    for(const[a,b]of[[1,0],[-1,0],[0,1],[0,-1]]){mesh(GEO.box,LM_(0x3a3a44),a*90,-1.2,b*90,0,0,0,[a?150:10,1,b?150:10]);}
+    mesh(new THREE.ConeGeometry(30,26,6),under,0,-TILE_T-13,0,Math.PI);
+  },
+  grass(){
+    const side=SM_(0x8a6a44,{flatShading:true}),under=SM_(0x5a4430,{flatShading:true});
+    const gc=[0x6ccf5a,0x62c452,0x76d864,0x5cbc4c];
+    for(let q=-5;q<=5;q++)for(let r=-5;r<=5;r++){const ring=hexDist(q,r);if(ring>5)continue;const v=((q*3+r*5)%4+4)%4;
+      const hill=ring>=4?(Math.sin(q*1.7+r*2.3)*.5+.5)*1.1:ring===0?.3:0,top=Math.round(hill*10)/10;
+      addTile(q,r,{col:gc[v],side,under,top,h:TILE_T+top,taper:.85,cg:ring>=3?6-ring:0});}
+    // trees with leafy one-way tops
+    const bark=LM_(0x7a5432),leaf=LM_(0x3f9a3a),leaf2=LM_(0x58b04a);
+    for(let i=0;i<3;i++){const a=i/3*Math.PI*2+Math.PI/6,x=Math.cos(a)*11,z=Math.sin(a)*11;addPlat({x,z,y:5.6,r:2.5,col:0x4aa040,rim:0x2f7a2a,rimW:.22,thick:.45,cg:3});
+      mesh(GEO.cyl,bark,x,2.8,z,0,0,0,[.4,5.6,.4]);for(let k=0;k<5;k++){const b=k/5*6.28;mesh(GEO.sph,k%2?leaf:leaf2,x+Math.cos(b)*1.9,5.2,z+Math.sin(b)*1.9,0,0,0,[1.3,.7,1.3]);}}
+    // flowers & grass tufts
+    const fl=[0xffffff,0xffe14a,0xff8ac8,0xb48aff].map(c=>new THREE.MeshBasicMaterial({color:c})),tuft=LM_(0x4aa83a);
+    for(let i=0;i<60;i++){const g=randomGround(true);if(!g)continue;if(i%2)mesh(GEO.sph,fl[i%4],g.x,g.top+.12,g.z,0,0,0,[.16,.1,.16]);else mesh(GEO.cone,tuft,g.x,g.top+.2,g.z,0,0,0,[.18,.45,.18]);}
+    // distant hills, windmill
+    const hl=[LM_(0x5cae4a),LM_(0x4e9e40),LM_(0x6ab858)];
+    for(let i=0;i<14;i++){const a=i/14*6.28+rand(-.2,.2),R=rand(90,190),sz=rand(25,55);mesh(GEO.sph,hl[i%3],Math.cos(a)*R,-12,Math.sin(a)*R,0,0,0,[sz*1.6,sz*.45,sz*1.3]);}
+    mesh(new THREE.CylinderGeometry(300,300,1,40),LM_(0x4e9e40),0,-30,0);
+    const wmx=-70,wmz=-90;mesh(GEO.cyl,LM_(0xf0ece0),wmx,6,wmz,0,0,0,[2,30,2]);const bl=new THREE.Group();bl.position.set(wmx,21,wmz+1.5);STG.root.add(bl);
+    for(let k=0;k<4;k++){const b=new THREE.Mesh(GEO.box,LM_(0xffffff));b.scale.set(1.2,12,.2);b.position.y=6;const h=new THREE.Group();h.rotation.z=k*Math.PI/2;h.add(b);bl.add(h);}STG.deco.mill=bl;
+    mesh(new THREE.ConeGeometry(30,24,7),under,0,-TILE_T-12,0,Math.PI);
+    // tornado
+    const tg=new THREE.Group();tg.visible=false;STG.root.add(tg);STG.deco.tor=tg;STG.deco.torR=[];
+    for(let k=0;k<9;k++){const m=new THREE.Mesh(GEO2.torus,new THREE.MeshBasicMaterial({color:k%2?0xd8d0bc:0xf0eade,transparent:true,opacity:.45,depthWrite:false}));
+      const rr=1.1+k*.45;m.scale.set(rr,rr,8);m.rotation.x=Math.PI/2;m.position.y=k*1.5+.5;tg.add(m);STG.deco.torR.push(m);}
+    const core=new THREE.Mesh(new THREE.CylinderGeometry(4.5,.8,14,16,1,true),new THREE.MeshBasicMaterial({color:0xe8e0cc,transparent:true,opacity:.22,depthWrite:false,side:THREE.DoubleSide}));core.position.y=7;tg.add(core);
+  },
   jungle(){
     const wood=0x8a5a32,leaf=0x3f9a3a;
     addPlat({x:0,z:0,y:0,r:6.4,col:wood,rim:leaf,rimW:.32,thick:.8});
@@ -1426,7 +1501,7 @@ function buildStage(key){
   if(!STAGES[key])key='sky';
   if(STG.root){scene.remove(STG.root);}
   STG.root=new THREE.Group();scene.add(STG.root);STG.key=key;STG.deco={};STG.wave=null;STG.jawT=-1;
-  tiles.clear();tileList.length=0;plats.length=0;STG.hz=undefined;STG.cans=[];STG.bellT=-1;STG.bellId=0;STG.bellCd=0;STG.bellBy=null;STG.bellW=.35;STG.jawHit=false;STG.zg=0;STG.gust=null;
+  tiles.clear();tileList.length=0;plats.length=0;STG.hz=undefined;STG.cans=[];STG.trucks=[];STG.tor=null;STG.bellT=-1;STG.bellId=0;STG.bellCd=0;STG.bellBy=null;STG.bellW=.35;STG.jawHit=false;STG.zg=0;STG.gust=null;
   STAGE=STAGES[key];BUILD[key]();setSky(STAGE);
   STAGE.cgMax=Math.max(0,...tileList.map(t=>t.cg),...plats.map(p=>p.cg));
 }
@@ -1434,7 +1509,7 @@ function resetStage(key){
   if(key&&key!==STG.key){buildStage(key);return;}
   for(const t of tileList){t.state='solid';t.warnT=0;t.vy=0;t.mesh.visible=true;t.mesh.position.set(t.x,t.top-t.h/2,t.z);t.mesh.rotation.set(0,0,0);t.topMat.emissive.setHex(0);}
   for(let i=plats.length-1;i>=0;i--){const p=plats[i];if(!p.fixed){scene.remove(p.mesh);plats.splice(i,1);continue;}p.state='solid';p.warnT=0;p.vy=0;p.mesh.visible=true;p.mesh.position.set(p.x,p.y,p.z);p.mesh.rotation.set(0,0,0);p.mat.emissive.setHex(0);}
-  STG.wave=null;STG.jawT=-1;STG.jawHit=false;STG.hz=undefined;STG.zg=0;STG.gust=null;STG.cans=[];STG.bellT=-1;STG.bellId=0;STG.bellCd=0;STG.bellBy=null;STG.bellW=.35;
+  STG.wave=null;STG.jawT=-1;STG.jawHit=false;STG.hz=undefined;STG.zg=0;STG.gust=null;STG.cans=[];STG.trucks=[];STG.tor=null;STG.bellT=-1;STG.bellId=0;STG.bellCd=0;STG.bellBy=null;STG.bellW=.35;
 }
 const ICE_PLAT_MAT=new THREE.MeshStandardMaterial({color:0xbff2ff,roughness:.2,transparent:true,opacity:.85,emissive:0x2a6a80});
 function makePlatMesh(r){const m=new THREE.Mesh(new THREE.CylinderGeometry(r,r*.6,.6,6),ICE_PLAT_MAT.clone());m.castShadow=true;m.receiveShadow=true;scene.add(m);return m;}
@@ -1498,6 +1573,19 @@ function stageHazards(dt){
     if(Math.random()<.5){STG.hz=rand(16,22);FX.emit('zerog');}
     else{STG.hz=rand(12,16);FX.emit('debris');for(let i=0;i<4;i++){const g=randomGround(false);spawnProj('meteor',null,g.x,g.top,g.z,0,0,0).t=-i*.35;}}
   }
+  if(k==='city'){
+    if(STG.hz<=0){STG.hz=rand(7,11)-Math.min(3,G.time/80);const busy=new Set(STG.trucks.map(t=>t.l));const free=[0,1].filter(l=>!busy.has(l));
+      if(free.length){const l=free[Math.floor(Math.random()*free.length)];FX.emit('truck',l,Math.random()<.5?1:-1);}}
+    for(const T of STG.trucks){if(T.t<TRUCK_WARN)continue;const sp=truckS(T),L=LANES[T.l];
+      for(const f of G.fighters){if(f.dead||f.eliminated||T.hit.has(f))continue;const al=L.x?f.x:f.z,pe=L.x?f.z:f.x;
+        if(Math.abs(pe)<L.hw&&Math.abs(al-sp)<3.4&&f.y<3){T.hit.add(f);applyHit(null,f,TRUCK,L.x?T.d:0,L.x?0:T.d,1,{neutral:true,px:f.x,py:f.y+1,pz:f.z});}}}
+  }
+  if(k==='grass'){
+    if(STG.hz<=0&&!STG.tor){STG.hz=rand(10,15);const a=rand(0,6.28),R=rand(17,21);FX.emit('tornado',r1(Math.cos(a)*R),r1(Math.sin(a)*R),r2(a+Math.PI+rand(-.5,.5)));}
+    const T=STG.tor;if(T&&T.t>.8&&T.t<TOR_LIFE-.6){const P=torPos(T);
+      for(const f of G.fighters){if(f.dead||f.eliminated)continue;const dx=f.x-P.x,dz=f.z-P.z,d=Math.hypot(dx,dz);
+        if(d<2.4&&f.y<P.y+10&&(T.hit.get(f)||-9)<T.t-1.4){T.hit.set(f,T.t);const l=d||1,ca=Math.cos(1.1),sa=Math.sin(1.1),ux=dx/l,uz=dz/l;applyHit(null,f,TWISTER,ux*ca-uz*sa,ux*sa+uz*ca,1,{neutral:true,px:f.x,py:f.y+1,pz:f.z});}}}
+  }
   if(k==='tower'&&STG.hz<=0&&!STG.gust){STG.hz=rand(12,17);FX.emit('gust',r2(rand(0,Math.PI*2)));}
   if(k==='desert'&&STG.hz<=0&&STG.jawT<0){
     const R=pitRadius()+3.5;if(G.fighters.some(f=>!f.dead&&!f.eliminated&&Math.hypot(f.x,f.z)<R)){STG.hz=rand(6,9);FX.emit('jaws');}else STG.hz=1;
@@ -1518,6 +1606,10 @@ function stageHazards(dt){
     for(const f of G.fighters){if(f.dead||f.eliminated)continue;const r=Math.hypot(f.x,f.z);if(r<R&&f.y<1.5){applyHit(null,f,JAW,r>.1?-f.x/r:1,r>.1?-f.z/r:0,1,{noAttFreeze:true,neutral:true});}}}
 }
 const BELL_DEF={dmg:9,base:11,grow:.15,ang:34};
+const TRUCK={dmg:14,base:13,grow:.21,ang:34},TWISTER={dmg:7,base:12,grow:.15,ang:72};
+const TRUCK_WARN=1.7,TRUCK_SPD=40,TOR_LIFE=10,LANES=[{x:1,hw:3},{x:0,hw:4.2}];
+function truckS(T){return -T.d*52+T.d*Math.max(0,T.t-TRUCK_WARN)*TRUCK_SPD;}
+function torPos(T){const t=T.t,a=T.a+Math.sin(t*.55)*.7,fx=Math.cos(T.a),fz=Math.sin(T.a);const x=T.x0+fx*t*3.6+(-fz)*Math.sin(t*.9)*2.2,z=T.z0+fz*t*3.6+fx*Math.sin(t*.9)*2.2;const g=groundTop(x,z,6);return{x,z,y:g===null?0:g,a};}
 const BELL_Y=6.6,BELL_C=5.5,BELL_HR=1.35,BELL_ROOF=8.4,BELL_CD=6;   // bell pivot, body centre, hit radius, roof top, cooldown
 function bellR(){const w=STG.bellW||.35;return STG.bellT>w?(STG.bellT-w)*17:-1;}
 function bellReady(){return STG.key==='castle'&&G.mr.hazards&&STG.bellT<0&&(STG.bellCd||0)<=0&&G.state==='play';}
@@ -1534,14 +1626,25 @@ function stageTime(dt){
   if(STG.bellT>=0){STG.bellT+=dt;if(STG.bellT>(STG.bellW||.35)+3.1)STG.bellT=-1;}
   if(STG.cans&&STG.cans.length){for(const c of STG.cans)c.t+=dt;STG.cans=STG.cans.filter(c=>c.t<2.1);}
   if(STG.jawT>=0){STG.jawT+=dt;if(STG.jawT>1.9){STG.jawT=-1;STG.jawHit=false;}}
+  if(STG.trucks&&STG.trucks.length){for(const T of STG.trucks)T.t+=dt;STG.trucks=STG.trucks.filter(T=>T.t<TRUCK_WARN+104/TRUCK_SPD);}
+  if(STG.tor){STG.tor.t+=dt;if(STG.tor.t>TOR_LIFE)STG.tor=null;}
 }
 function stageForces(f,dt){
   const gu=STG.gust;if(gu&&gu.t>1&&gu.t<3.8&&!f.dead){const k=(f.grounded?7:15)*dt*(f.shield?.3:1);f.vx+=Math.cos(gu.a)*k;f.vz+=Math.sin(gu.a)*k;}
+  const T=STG.tor;if(T&&T.t>.8&&T.t<TOR_LIFE-.6&&!f.dead){const P=torPos(T),dx=P.x-f.x,dz=P.z-f.z,d=Math.hypot(dx,dz);if(d<8&&d>.3){const k=(1-d/8)*(f.shield?6:16)*dt;f.vx+=dx/d*k;f.vz+=dz/d*k;}}
   if(!f.grounded||!f.gt)return;
   if(f.gt.pull&&f.gt.state!=='falling'){const r=Math.hypot(f.x,f.z)||1,p=f.gt.pull;f.x+=(-f.x/r*p+(-f.z/r)*p*.35)*dt;f.z+=(-f.z/r*p+(f.x/r)*p*.35)*dt;}
 }
 function stageTick(dt){
   const k=STG.key,D=STG.deco;
+  if(k==='city'&&D.trucks){D.trucks.forEach(m=>m.visible=false);D.laneW.forEach(m=>m.visible=false);
+    (STG.trucks||[]).forEach((T,i)=>{const L=LANES[T.l],w=D.laneW[T.l];w.visible=true;w.material.opacity=T.t<TRUCK_WARN?.25+.3*Math.abs(Math.sin(T.t*12)):.18;
+      const m=D.trucks[i%2];if(T.t>=TRUCK_WARN){const sp=truckS(T);m.visible=true;m.position.set(L.x?sp:0,0,L.x?0:sp);m.rotation.y=L.x?(T.d>0?Math.PI/2:-Math.PI/2):(T.d>0?0:Math.PI);
+        if(Math.random()<.5)VFX.trail(m.position.x-(L.x?T.d*4.5:0),.4,m.position.z-(L.x?0:T.d*4.5),'#9a9490',.4);}});}
+  if(k==='grass'){if(D.mill)D.mill.rotation.z+=dt*.8;const T=STG.tor,tg=D.tor;
+    if(tg){tg.visible=!!T;if(T){const P=torPos(T),sc=Math.min(1,T.t/.8)*Math.min(1,(TOR_LIFE-T.t)/1);tg.position.set(P.x,P.y,P.z);tg.scale.set(sc,sc,sc);
+      D.torR.forEach((m,i)=>{m.rotation.z+=dt*(6+i*.6);m.position.x=Math.sin(G.clock*3+i*.7)*.25*i;});tg.children[tg.children.length-1].rotation.y+=dt*5;
+      if(Math.random()<.8){const a=rand(0,6.28),r=rand(1,3.5);VFX.burst(P.x+Math.cos(a)*r,P.y+rand(0,4),P.z+Math.sin(a)*r,1,Math.random()<.5?'#c8b890':'#6ccf5a',3,.14,.8,-3,.5);}}}}
   if(k==='arena'){
     if(D.crowd)for(const c of D.crowd)c.m.position.y=c.y+Math.abs(Math.sin(G.clock*4+c.ph))*(G.shake>.3?1.4:.45);
     if(D.flames)D.flames.forEach((m,i)=>{m.scale.set(1.1+Math.sin(G.clock*11+i)*.12,2.6+Math.sin(G.clock*15+i*2)*.5,1.1);if(Math.random()<dt*6)VFX.trail(m.position.x,m.position.y+1.2,m.position.z,Math.random()<.5?'#ffb24a':'#ff6a1a',.25);});
@@ -1914,7 +2017,7 @@ function meteorVisual(mesh,t,delay){const rk=mesh.userData&&mesh.userData.rock;i
 
 /* ---------------- game state ---------------- */
 const G={state:'menu',demo:true,paused:false,time:0,clock:0,fighters:[],items:[],projs:[],nid:0,
-  settings:(()=>{const o=store('br_set'),d={arch:'random',cv:0,count:8,level:2,stocks:3,stage:'random',v:8};if(o&&!o.v)o.level=[0,2,3,4][o.level|0]||2;return Object.assign(d,o||{},{v:8});})(),autoAdj:(store('br_auto')||{}).adj||0,practice:false,focus:null,rules:normRules(store('br_rules')),mr:normRules(),
+  settings:(()=>{const o=store('br_set'),d={tm:-1,arch:'random',cv:0,count:8,level:2,stocks:3,stage:'random',v:8};if(o&&!o.v)o.level=[0,2,3,4][o.level|0]||2;return Object.assign(d,o||{},{v:8});})(),autoAdj:(store('br_auto')||{}).adj||0,practice:false,focus:null,rules:normRules(store('br_rules')),mr:normRules(),
   cstep:0,nextShrink:45,itemT:8,rushT:60,slowT:0,lastSlow:-9,shake:0,me:null,fast:false,overT:0,cd:0,online:false,netClient:false};
 if(!ARCH[G.settings.arch])G.settings.arch='random';
 const pickArch=a=>ARCH[a]?a:CHAR_KEYS[Math.floor(Math.random()*CHAR_KEYS.length)];
@@ -2007,6 +2110,8 @@ const FXH={
     else hazWarn('🔔 大鐘が鳴った！ 光の輪をジャンプ',2.2);
     setTimeout(()=>{if(STG.key!=='castle')return;VFX.ring(0,1.4,0,'#ffe08a',6,.5,true);},w*1000);},
   cannon(sx,sz,tx,ty,tz,dl){STG.cans=STG.cans||[];STG.cans.push({t:-(dl||0),sx,sz,tx,ty,tz,fired:false});if(!dl){Sound.cannonWarn();hazWarn('💣 砲撃がくる！ 赤い線をジャンプ');if(!G.demo&&G.me&&!G.me.dead&&Math.hypot(G.me.x-tx,G.me.z-tz)<5)FText.add(G.me.x,G.me.y+3,G.me.z,'⚠ ねらわれている！','#ff6a4a',true);}},
+  truck(l,d){STG.trucks=STG.trucks||[];STG.trucks.push({l,d,t:0,hit:new Set()});hazWarn('🚚 トラックが来る！ 赤く光った道路から出ろ',2);Sound.horn();},
+  tornado(x0,z0,a){STG.tor={x0,z0,a,t:0,hit:new Map()};hazWarn('🌪️ 竜巻が発生！ 近づくと吸い込まれるぞ',2.4);Sound.twister();},
   cfire(sx,sz){VFX.burst(sx,2,sz,26,'#fff0c0',14,.4,.5,4,1);VFX.burst(sx,2.5,sz,20,'#9a9490',6,.9,1.4,-2,.4);Sound.cannon(Sound.pos(sx,2,sz));},
   cboom(x,y,z){VFX.burst(x,y,z,30,'#ffb24a',14,.35,.5,6,1.5);VFX.burst(x,y,z,16,'#5a5450',8,.6,.9,4,1);Sound.boom(Sound.pos(x,y,z));G.shake=Math.max(G.shake,.4);},
   parry(x,y,z,s){VFX.ring(x,y,z,'#9ff4ff',2.6,.35,true);VFX.burst(x,y,z,22,'#e6fdff',12,.25,.5,0,2);FText.add(x,y+1.6,z,'PARRY!','#9ff4ff',true);Sound.parry(Sound.pos(x,y,z));if(G.fighters[s]===G.me)flash(.15);},
@@ -2761,6 +2866,8 @@ class Brain{
     const cur=f.gt;
     if(cur&&cur.state==='warn'&&f.grounded){const s=nearestGround(f.x,f.z,true);if(s){this.dirTo(s.x,s.z,0);if(Math.random()<.35)I.jumpP=true;return;}}
     if(cur&&!cur.fixed&&cur.ttl!==undefined){const t=nearestGround(f.x,f.z,true);if(t){this.dirTo(t.x,t.z,0);I.jumpP=true;return;}}
+    if(STG.trucks)for(const T of STG.trucks){const Ln=LANES[T.l],pe=Ln.x?f.z:f.x;if(Math.abs(pe)<Ln.hw+.8&&Math.random()<L.dodge+.3){const s2=pe>=0?1:-1;if(Ln.x){this.mx=0;this.mz=s2;}else{this.mx=s2;this.mz=0;}return;}}
+    if(STG.tor){const P=torPos(STG.tor),dx=f.x-P.x,dz=f.z-P.z,d=Math.hypot(dx,dz);if(d<7.5&&Math.random()<L.dodge+.2){const g=nearestGround(f.x+dx/(d||1)*5,f.z+dz/(d||1)*5,true);if(g)this.dirTo(g.x,g.z,0);return;}}
     // dodge incoming strikes / vortices
     if(Math.random()<L.dodge+.25)for(const p of G.projs){if(p.owner===f)continue;const R=p.kind==='vortex'?7:(p.kind==='meteor'||p.kind==='bolt'||p.kind==='raijin')?p.r+1.6:0;if(!R)continue;
       const dd=Math.hypot(f.x-p.x,f.z-p.z);if(dd<R){const g=nearestGround(f.x+(f.x-p.x)/(dd||1)*4,f.z+(f.z-p.z)/(dd||1)*4,true);if(g){this.dirTo(g.x,g.z,0);}else{this.mx=(f.x-p.x)/(dd||1);this.mz=(f.z-p.z)/(dd||1);}if(p.kind==='vortex'&&f.grounded&&Math.random()<.3)I.jumpP=true;return;}}
@@ -3166,6 +3273,11 @@ function clearMatch(){
   Net.cItems={};Net.cProjs={};
 }
 /* roster entries: {n:name,a:arch,local,remote(peer),bot,ghost,predict} */
+/* team choice: players who picked a team are put there; everyone else (then the CPUs) fills the smallest team */
+function assignTeams(roster,T){const cnt=Array(T).fill(0),ok=e=>e.want>=0&&e.want<T;
+  for(const e of roster)if(ok(e)){e.tm=e.want;cnt[e.tm]++;}
+  for(const e of roster)if(!ok(e)){let b=0;for(let t=1;t<T;t++)if(cnt[t]<cnt[b])b=t;e.tm=b;cnt[b]++;}}
+function teamName(t){return t>=0?TEAM_NAMES[t]:'おまかせ';}
 function pickStage(k){return k&&STAGES[k]?k:STAGE_KEYS[Math.floor(Math.random()*STAGE_KEYS.length)];}
 function startMatch(mode,roster,stocks,level,stageKey,rules){
   Input.pad.sync=true;for(const p of allPads()){const st=PAD_ST[p.index]||(PAD_ST[p.index]={});st.start=!!(p.buttons[9]&&p.buttons[9].pressed);}
@@ -3205,15 +3317,16 @@ const Local={slots:[],set:Object.assign({cpu:2,level:2,stocks:3},store('br_party
   has(dev,pad){return this.slots.find(L=>L.dev===dev&&(dev==='kb'||L.pad===pad));},
   join(dev,pad,fam){if(this.slots.length>=4||this.has(dev,pad))return;const used=new Set(this.slots.map(L=>L.arch));
     const arch=dev==='kb'&&ARCH[G.settings.arch]&&!used.has(G.settings.arch)?G.settings.arch:CHAR_KEYS.find(k=>!used.has(k))||'blaze';
-    this.slots.push({dev,pad,fam,arch});Sound.pick&&Sound.pick(true,null,true,false);this.render();},
+    this.slots.push({dev,pad,fam,arch,tm:-1});Sound.pick&&Sound.pick(true,null,true,false);this.render();},
   leave(L){this.slots=this.slots.filter(x=>x!==L);Sound.ui&&Sound.ui();this.render();},
+  team(L,d){const T=G.rules.teams;if(!T)return;L.tm=((L.tm+1+d)%(T+1)+T+1)%(T+1)-1;Sound.ui&&Sound.ui();this.render();},
   cycle(L,d){const i=CHAR_KEYS.indexOf(L.arch);L.arch=CHAR_KEYS[(i+d+CHAR_KEYS.length)%CHAR_KEYS.length];Sound.ui&&Sound.ui();this.render();},
   devLabel(L){return L.dev==='kb'?(isTouch?'📱 画面操作 / ⌨':'⌨ キーボード'):`🎮 ${FAM[L.fam||'gen'].n}（${L.pad+1}番）`;},
   render(){const box=$('#locslots');if(!box)return;let h='';
     for(let i=0;i<4;i++){const L=this.slots[i],pc=SLOT_COLORS[i];
-      if(L){const A=ARCH[L.arch];h+=`<div class="ls on" style="--pc:${pc}"><div class="pn">P${i+1}</div><div class="lr"><button data-c="${i}" data-d="-1">◀</button><div class="av" data-c="${i}" data-d="1">${charSVG(L.arch,pc)}</div><button data-c="${i}" data-d="1">▶</button></div><div class="cn">${A.name}</div><div class="dv">${this.devLabel(L)}</div><div class="x">${L.dev==='kb'?'A / D でキャラ変更・Esc で抜ける':'◀▶ でキャラ変更・'+Ctl.g('back',L.fam||'gen')+' で抜ける'}</div></div>`;}
+      if(L){const A=ARCH[L.arch];h+=`<div class="ls on" style="--pc:${pc}"><div class="pn">P${i+1}</div><div class="lr"><button data-c="${i}" data-d="-1">◀</button><div class="av" data-c="${i}" data-d="1">${charSVG(L.arch,pc)}</div><button data-c="${i}" data-d="1">▶</button></div><div class="cn">${A.name}</div>${G.rules.teams?`<button class="rbtn" data-tm="${i}" style="margin:2px 0;padding:5px 10px;font-size:12px;${L.tm>=0&&L.tm<G.rules.teams?`color:${TEAM_COLORS[L.tm]}`:''}">チーム：${L.tm>=0&&L.tm<G.rules.teams?'● ':''}${teamName(L.tm<G.rules.teams?L.tm:-1)}</button>`:''}<div class="dv">${this.devLabel(L)}</div><div class="x">${L.dev==='kb'?(G.rules.teams?'W / S でチーム・':'')+'A / D でキャラ変更・Esc で抜ける':(G.rules.teams?'▲▼ でチーム・':'')+'◀▶ でキャラ変更・'+Ctl.g('back',L.fam||'gen')+' で抜ける'}</div></div>`;}
       else h+=`<div class="ls" data-j="1" style="--pc:${pc};cursor:pointer"><div class="pn" style="opacity:.5">P${i+1}</div><div class="wait">参加するには<br>コントローラーのボタン<br>または <span class="gb kb">Space</span>${this.has('kb')?'':'／ここをタップ'}</div></div>`;}
-    box.innerHTML=h;box.querySelectorAll('[data-j]').forEach(b=>b.onclick=()=>{if(!this.has('kb'))this.join('kb');});box.querySelectorAll('[data-c]').forEach(b=>b.onclick=()=>{const L=this.slots[+b.dataset.c];if(L)this.cycle(L,+b.dataset.d);});
+    box.innerHTML=h;box.querySelectorAll('[data-j]').forEach(b=>b.onclick=()=>{if(!this.has('kb'))this.join('kb');});box.querySelectorAll('[data-tm]').forEach(b=>b.onclick=()=>{const L=this.slots[+b.dataset.tm];if(L)this.team(L,1);});box.querySelectorAll('[data-c]').forEach(b=>b.onclick=()=>{const L=this.slots[+b.dataset.c];if(L)this.cycle(L,+b.dataset.d);});
     const n=this.slots.length,cpu=this.set.cpu;
     $('#lochint').innerHTML=n?`参加 ${n}人${cpu?` ＋ CPU ${cpu}人`:''}　・　そろったら <b>試合開始</b>（${Ctl.g('pause',this.slots.find(L=>L.dev==='pad')?.fam||'xbox')} / Enter でもOK）`:'コントローラーをつないで、各自ボタンを押して参加しよう（キーボードは1人まで）';
     document.querySelectorAll('#local .seg').forEach(seg=>seg.querySelectorAll('button').forEach(b=>b.classList.toggle('on',+b.dataset.v===this.set[seg.dataset.lk])));
@@ -3222,15 +3335,16 @@ const Local={slots:[],set:Object.assign({cpu:2,level:2,stocks:3},store('br_party
   /* lobby input: keyboard & every controller (runs every frame while the lobby is open) */
   poll(dt){if(UI.cur!=='local')return;
     for(const p of allPads()){const st=this.prev[p.index]||(this.prev[p.index]={});if(PadCfg.on)return;
-      const fam=Ctl.famOf(p.id),L=this.has('pad',p.index),lr=padDir(p).dx;
-      const any=padAny(p)&&!lr,start=padPress(p,'pause'),back=padPress(p,'back'),ok=padPress(p,'ok');
+      const fam=Ctl.famOf(p.id),L=this.has('pad',p.index),pd=padDir(p),lr=pd.dx,ud=pd.dy;
+      const any=padAny(p)&&!lr&&!ud,start=padPress(p,'pause'),back=padPress(p,'back'),ok=padPress(p,'ok');
       if(!L){if(any&&!st.any&&!back)this.join('pad',p.index,fam);}
-      else{if(back&&!st.back)this.leave(L);else if(lr&&lr!==st.lr)this.cycle(L,lr);else if(start&&!st.start)this.start();
+      else{if(back&&!st.back)this.leave(L);else if(lr&&lr!==st.lr)this.cycle(L,lr);else if(ud&&ud!==st.ud)this.team(L,ud);else if(start&&!st.start)this.start();
         else if(ok&&!st.ok&&this.slots.length>=2)this.start();}
-      st.any=any;st.back=back;st.lr=lr;st.start=start;st.ok=ok;}},
+      st.any=any;st.back=back;st.lr=lr;st.ud=ud;st.start=start;st.ok=ok;}},
   key(code){if(UI.cur!=='local')return false;const L=this.has('kb');
     if(!L&&(code==='Space'||code==='KeyJ')){this.join('kb');return true;}
     if(L){if(code==='KeyA'||code==='ArrowLeft'){this.cycle(L,-1);return true;}if(code==='KeyD'||code==='ArrowRight'){this.cycle(L,1);return true;}
+      if(code==='KeyW'||code==='ArrowUp'){this.team(L,-1);return true;}if(code==='KeyS'||code==='ArrowDown'){this.team(L,1);return true;}
       if(code==='Escape'){this.leave(L);return true;}}
     if(code==='Enter'){this.start();return true;}
     if(code==='Escape'){$('#btn-loc-back').click();return true;}return false;},
@@ -3238,7 +3352,7 @@ const Local={slots:[],set:Object.assign({cpu:2,level:2,stocks:3},store('br_party
     const names=CPU_NAMES.slice().sort(()=>Math.random()-.5);
     const roster=this.slots.map((L,i)=>({n:'P'+(i+1),a:L.arch,local:true,ctl:L.dev==='kb'?{kb:true}:{pad:L.pad},cv:undefined}));
     for(let i=0;i<this.set.cpu;i++)roster.push({n:names[i],a:CHAR_KEYS[Math.floor(Math.random()*CHAR_KEYS.length)],bot:true});
-    if(G.rules.teams){const T=G.rules.teams;roster.forEach((e,i)=>e.tm=i%T);}
+    this.slots.forEach((L,i)=>roster[i].want=L.tm);if(G.rules.teams)assignTeams(roster,G.rules.teams);
     G.lastMode='local';startMatch('offline',roster,this.set.stocks,this.set.level,G.settings.stage==='random'?null:G.settings.stage,G.rules);Sound.startBGM();}
 };
 function locals(){return G.fighters.filter(f=>f.local&&!f.brain);}
@@ -3249,7 +3363,7 @@ function startOffline(){
   const S=G.settings,names=CPU_NAMES.slice().sort(()=>Math.random()-.5);
   const roster=[{n:'YOU',a:pickArch(S.arch),local:true,cv:ARCH[S.arch]?S.cv|0:undefined}];
   for(let i=1;i<S.count;i++)roster.push({n:names[i],a:CHAR_KEYS[Math.floor(Math.random()*CHAR_KEYS.length)],bot:true});
-  if(G.rules.teams){const T=G.rules.teams;roster.forEach((e,i)=>e.tm=i%T);}
+  roster[0].want=S.tm;if(G.rules.teams)assignTeams(roster,G.rules.teams);
   startMatch('offline',roster,S.stocks,S.level,S.stage==='random'?null:S.stage,G.rules);
 }
 const MOVE_JP={jab1:'ジャブ1',jab2:'ジャブ2',jab3:'ジャブ3（フィニッシュ）',smash:'スマッシュ',air:'空中攻撃',fair:'空中前',bair:'空中後ろ',uair:'空中上',dair:'メテオ',dashatk:'ダッシュ攻撃',grab:'つかみ投げ',getup:'崖上がり攻撃',throw:'アイテム投げ'};
@@ -3602,7 +3716,7 @@ const Net={role:'off',PeerCls:null,room:null,code:null,status:'idle',hostPeer:nu
     for(let a=0;a<4&&!peer;a++){code=randCode();try{peer=await this.newPeer(PEER_PREFIX+code);}catch(e){if(!(e&&e.type==='unavailable-id'))break;}}
     this.busy=false;if(!peer){toast('ルームを作成できませんでした（通信を確認してください）');return;}
     this.room=new PRoom(peer,true);this.role='host';this.code=code;this.matchId=null;this.myPeer=peer.id;this.bind();
-    this.room.presence({nm:myName(),ar:G.settings.arch,cv:G.settings.cv|0,host:1,ru:G.rules,m:null,s:null});
+    this.room.presence({nm:myName(),ar:G.settings.arch,cv:G.settings.cv|0,tm:G.settings.tm,host:1,ru:G.rules,m:null,s:null});
     this.lobbyPresence();UI.show('room');UI.renderRoom();
   },
   async join(code){
@@ -3613,7 +3727,7 @@ const Net={role:'off',PeerCls:null,room:null,code:null,status:'idle',hostPeer:nu
     let peer;try{peer=await this.newPeer(null);}catch(e){this.busy=false;toast('参加できませんでした（通信を確認してください）');return;}
     this.busy=false;
     this.room=new PRoom(peer,false);this.role='client';this.code=code;this.hostPeer=null;this.matchId=null;this.myPeer=peer.id;this.bind();
-    this.room.presence({nm:myName(),ar:G.settings.arch,cv:G.settings.cv|0});
+    this.room.presence({nm:myName(),ar:G.settings.arch,cv:G.settings.cv|0,tm:G.settings.tm});
     this.room.connect(PEER_PREFIX+code);
     UI.show('room');UI.renderRoom();
     clearTimeout(this.joinTO);this.joinTO=setTimeout(()=>{if(this.role==='client'&&!this.hostPeer)this.fail('ルームが見つかりませんでした');},12000);
@@ -3652,15 +3766,15 @@ const Net={role:'off',PeerCls:null,room:null,code:null,status:'idle',hostPeer:nu
   /* ---- host ---- */
   startHost(){
     const peers=this.room.peers();const S=this.set;
-    const humans=[{p:this.myPeer||'host',n:myName(),a:pickArch(G.settings.arch),cv:ARCH[G.settings.arch]?G.settings.cv|0:undefined,local:true}];
+    const humans=[{p:this.myPeer||'host',n:myName(),a:pickArch(G.settings.arch),cv:ARCH[G.settings.arch]?G.settings.cv|0:undefined,local:true,want:G.settings.tm}];
     for(const p of peers){if(p.sameTab||p.kind!=='viewer')continue;const pr=p.presence||{};if(typeof pr.nm!=='string')continue;if(humans.length>=12)break;
-      humans.push({p:p.peer,n:cleanName(pr.nm),a:pickArch(pr.ar),cv:ARCH[pr.ar]?clamp(pr.cv|0,0,CVAR.length-1):undefined,remote:p.peer});}
+      humans.push({p:p.peer,n:cleanName(pr.nm),a:pickArch(pr.ar),cv:ARCH[pr.ar]?clamp(pr.cv|0,0,CVAR.length-1):undefined,remote:p.peer,want:typeof pr.tm==='number'?pr.tm|0:-1});}
     const roster=humans.slice();const names=CPU_NAMES.slice().sort(()=>Math.random()-.5);
     const total=S.count?Math.max(S.count,humans.length):Math.max(2,humans.length);
     for(let i=roster.length;i<total;i++)roster.push({p:'',n:names[i]+'(CPU)',a:CHAR_KEYS[Math.floor(Math.random()*CHAR_KEYS.length)],bot:true});
     this.matchId=Math.floor(rand(1,1e9));FX.log=[];FX.id=0;this.k=0;this.evSent=0;
     const sg=pickStage(S.stage==='random'?null:S.stage);
-    const ru=normRules(G.rules);if(ru.teams)roster.forEach((e,i)=>e.tm=i%ru.teams);
+    const ru=normRules(G.rules);if(ru.teams)assignTeams(roster,ru.teams);
     const m={id:this.matchId,r:roster.map(e=>[e.p||'',e.n,e.a,e.tm===undefined?-1:e.tm,e._cv|0]),st:S.stocks,sg,ru};
     startMatch('host',roster,S.stocks,S.level,sg,ru);
     this.room.presence({m,s:null}).catch(()=>{});
@@ -3853,9 +3967,10 @@ const UI={cur:'menu',
     const host=Net.role==='host';
     $('#hostset').classList.toggle('hidden',!host);$('#hostnote').classList.toggle('hidden',!host);$('#btn-host-start').classList.toggle('hidden',!host);$('#waitmsg').classList.toggle('hidden',host);
     const peers=Net.humanPeers();
-    $('#members').innerHTML=peers.map((p,i)=>{const pr=p.presence;const a=ARCH[pr.ar]?pr.ar:null;return`<div class="mem"><span class="pic">${a?charSVG(a,null,pr.cv|0):'🎲'}</span>${esc(cleanName(pr.nm))}${p.sameTab?' <span style="color:#ffd84a">(あなた)</span>':''}${pr.host===1?' 👑':''}${p.guest?' <small>ゲスト</small>':''}<small>${a?ARCH[a].name:'おまかせ'}</small></div>`;}).join('')||'<div class="st">接続中…</div>';
+    $('#members').innerHTML=peers.map((p,i)=>{const pr=p.presence;const a=ARCH[pr.ar]?pr.ar:null;const T0=Net.role==='host'?G.rules.teams:normRules((peers.find(q=>q.presence.host===1)||{presence:{}}).presence.ru).teams,tt=T0&&typeof pr.tm==='number'&&pr.tm>=0&&pr.tm<T0?pr.tm:-1;return`<div class="mem"><span class="pic">${a?charSVG(a,null,pr.cv|0):'🎲'}</span>${esc(cleanName(pr.nm))}${p.sameTab?' <span style="color:#ffd84a">(あなた)</span>':''}${pr.host===1?' 👑':''}${T0?` <span style="color:${tt>=0?TEAM_COLORS[tt]:'#ccc'};font-size:11px">${tt>=0?'● ':''}${teamName(tt)}</span>`:''}<small>${a?ARCH[a].name:'おまかせ'}</small></div>`;}).join('')||'<div class="st">接続中…</div>';
     $('#roominfo').textContent=host?`友だちにこのコードを伝えよう（${peers.length}/12人）`:`${peers.length}/12人が参加中`;
     document.querySelectorAll('#hostset .seg').forEach(seg=>seg.querySelectorAll('button').forEach(b=>b.classList.toggle('on',+b.dataset.v===Net.set[seg.dataset.nk])));
+    if(window.tmUI)tmUI();
     document.querySelectorAll('#roomchar button').forEach(b=>b.classList.toggle('on',b.dataset.v===G.settings.arch));
     document.querySelectorAll('#roomstage button').forEach(b=>b.classList.toggle('on',b.dataset.v===Net.set.stage));
     {const hp=peers.find(p=>p.presence.host===1);const ru=host?G.rules:(hp&&hp.presence.ru);$('#rsum-room').textContent=rulesSummary(normRules(ru));}
@@ -3868,11 +3983,17 @@ const UI={cur:'menu',
     el.innerHTML=`<div class="av">${charSVG(k)}</div><div class="lvb" data-lv="${k}"></div><div class="n">${a.name}<small>${a.el}</small></div><div class="d">${a.desc}</div>`+a.stats.map((s,i)=>`<div class="bar"><em>${lb[i]}</em><u style="--v:${s*20}%"></u></div>`).join('')+
       `<div class="mv"><b>B</b> ${a.mv.b}<br><b>空中B</b> ${a.mv.ba}<br><b>復帰</b> ${a.mv.up}<br><b>★</b> ${a.mv.sk}：${a.skd}</div>`;
     el.onclick=()=>{G.settings.arch=k;sync();};chars.appendChild(el);}
-  const cvUI=()=>{for(const id of['#cvsel','#cvsel2']){const box=$(id);box.innerHTML='';if(!ARCH[G.settings.arch]){box.innerHTML='<small style="opacity:.7">おまかせの時は自動で決まります</small>';continue;}CVAR.forEach((V,i)=>{const b=document.createElement('button');b.className='cvb'+(i===(G.settings.cv|0)?' on':'');b.title=V.n;b.innerHTML=charSVG(G.settings.arch,null,i);
+  const tmUI=()=>{const hp=Net.room&&Net.humanPeers().find(p=>p.presence.host===1);
+    for(const[row,box,T]of[['#tmrow','#tmsel',G.rules.teams],['#tmrow2','#tmsel2',Net.role==='host'?G.rules.teams:normRules(hp&&hp.presence.ru).teams]]){
+      $(row).style.display=T?'':'none';if(!T)continue;const el=$(box);const cur=G.settings.tm<T?G.settings.tm:-1;
+      el.innerHTML=[-1].concat([...Array(T).keys()]).map(t=>`<button data-t="${t}" class="${t===cur?'on':''}" style="${t>=0&&t!==cur?`color:${TEAM_COLORS[t]};`:''}font-weight:900">${t>=0?'● ':''}${teamName(t)}</button>`).join('');
+      el.querySelectorAll('button').forEach(b=>b.onclick=()=>{G.settings.tm=+b.dataset.t;store('br_set',G.settings);if(Net.room)Net.room.presence({tm:G.settings.tm});tmUI();if(UI.cur==='room')UI.renderRoom();});}};
+  window.tmUI=tmUI;
+  const cvUI=()=>{tmUI();for(const id of['#cvsel','#cvsel2']){const box=$(id);box.innerHTML='';if(!ARCH[G.settings.arch]){box.innerHTML='<small style="opacity:.7">おまかせの時は自動で決まります</small>';continue;}CVAR.forEach((V,i)=>{const b=document.createElement('button');b.className='cvb'+(i===(G.settings.cv|0)?' on':'');b.title=V.n;b.innerHTML=charSVG(G.settings.arch,null,i);
       b.onclick=()=>{G.settings.cv=i;sync();if(Net.room)Net.room.presence({cv:i}).catch(()=>{});if(UI.cur==='room')UI.renderRoom();};box.appendChild(b);});}
     document.querySelectorAll('.ch .av').forEach(a=>{const k=a.parentNode.dataset.k;if(!ARCH[k])return;a.innerHTML=charSVG(k,null,k===G.settings.arch?G.settings.cv|0:0);});};
   const SBG={sky:'linear-gradient(160deg,#3a7ae0,#8fd0ff 60%,#7fe08a)',volcano:'linear-gradient(160deg,#2a0c0c,#8a2d12 55%,#ff6a1a)',iceberg:'linear-gradient(160deg,#5a8fd8,#dff1ff 55%,#1f6fb0)',
-    desert:'linear-gradient(160deg,#3a7ad0,#f6e2b0 50%,#c2945a)',jungle:'linear-gradient(160deg,#1e3a22,#3f9a3a 55%,#9ac8a8)',space:'linear-gradient(160deg,#05030f,#2a1450 55%,#5a7aff)',tower:'linear-gradient(160deg,#0a0f2a,#a04a6a 60%,#ff9a5a)',island:'linear-gradient(160deg,#1a8ad8,#5ad8e0 50%,#f6e2a0)',castle:'linear-gradient(160deg,#0a0822,#5a2f74 55%,#b85a6a)',arena:'linear-gradient(160deg,#16306a,#b89e7a 55%,#f4ecd6)',random:'linear-gradient(160deg,#3a2a6a,#7a5ad0 60%,#d08aff)'};
+    desert:'linear-gradient(160deg,#3a7ad0,#f6e2b0 50%,#c2945a)',jungle:'linear-gradient(160deg,#1e3a22,#3f9a3a 55%,#9ac8a8)',space:'linear-gradient(160deg,#05030f,#2a1450 55%,#5a7aff)',tower:'linear-gradient(160deg,#0a0f2a,#a04a6a 60%,#ff9a5a)',city:'linear-gradient(160deg,#1a2a5a,#ff9a6a 55%,#4a4a52)',grass:'linear-gradient(160deg,#2a6ad8,#7ec0ff 45%,#6ccf5a)',island:'linear-gradient(160deg,#1a8ad8,#5ad8e0 50%,#f6e2a0)',castle:'linear-gradient(160deg,#0a0822,#5a2f74 55%,#b85a6a)',arena:'linear-gradient(160deg,#16306a,#b89e7a 55%,#f4ecd6)',random:'linear-gradient(160deg,#3a2a6a,#7a5ad0 60%,#d08aff)'};
   const sg=$('#stages');sg.className='stgs';
   for(const k of STAGE_KEYS.concat(['random'])){const S=STAGES[k]||{icon:'🎲',name:'ランダム',desc:'毎試合ステージがランダムに変わる'};const el=document.createElement('div');el.className='stg';el.dataset.k=k;el.style.background=SBG[k];
     el.innerHTML=`<div class="ic">${S.icon}</div><div class="n">${S.name}</div><div class="d">${S.desc}</div>${SONGS[k]?`<div class="d" style="opacity:.85;margin-top:3px">♪ ${SONGS[k].title}</div>`:''}`;el.onclick=()=>{G.settings.stage=k;sync();};sg.appendChild(el);}
@@ -3928,7 +4049,7 @@ const UI={cur:'menu',
   $('#btn-resume').onclick=togglePause;$('#btn-pause').onclick=togglePause;
   document.querySelectorAll('.vb,.vs').forEach(el=>{const k=el.classList.contains('vb')?'bgm':'sfx';el.value=Sound.vol[k];
     el.addEventListener('input',()=>{Sound.init();Sound.setVol(k,+el.value);document.querySelectorAll(k==='bgm'?'.vb':'.vs').forEach(o=>{if(o!==el)o.value=el.value;});if(k==='sfx'&&Sound.rl('volt',120))Sound.ui();});});
-  $('#nowplay').textContent='♪ ステージごとにオリジナルBGM（全11曲）。試合終盤・サドンデスで曲が盛り上がる';
+  $('#nowplay').textContent='♪ ステージごとにオリジナルBGM（全13曲）。試合終盤・サドンデスで曲が盛り上がる';
   // ---- rules screen ----
   const rb=$('#rulesbox');
   for(const R of RULE_UI){const d=document.createElement('div');d.className='opt';d.innerHTML=`<label>${R.l}</label>`;const sg=document.createElement('div');sg.className='seg';
